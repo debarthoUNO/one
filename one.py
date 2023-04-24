@@ -2,14 +2,19 @@
 
 print("working one")
 
-class one:
+class person:
 
 	def __init__(self, name, age):
 		self.name = name
 		self.age = age
 
-	def get_name():
-		print(self.name)
+	def __call__(self):
+		return "callable"
 
-	def get_age():
-		print(self.age)
+	def get_name(self):
+		return self.name
+
+	def get_age(self):
+		return self.age
+
+print(callable(person))
